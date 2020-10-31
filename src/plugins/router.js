@@ -9,13 +9,16 @@ const router = new VueRouter({
     mode: 'history',
     routes: [
         {
-            path: '/create', name: 'create', component: Create
+            path: '/create',
+            name: 'create',
+            component: Create,
         },
         {
-            path: '/join', name: 'join', component: Join
-        }
-    ]
+            path: '/join',
+            name: 'join',
+            component: Join,
+        },
+    ],
 });
 
-
-export default router; 
+export default router;

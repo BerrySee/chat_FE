@@ -53,25 +53,25 @@ import { AppService } from '../api/api';
 export default {
     name: 'Create',
     props: {
-        msg: String
+        msg: String,
     },
     data: () => ({
         name: null,
         owner: null,
-        password: null
+        password: null,
     }),
     methods: {
         async create() {
             const response = await AppService.createRoom({
                 name: this.name,
                 owner: this.owner,
-                password: this.password
+                password: this.password,
             });
             console.log(response);
             // const user = await AppService.getUser();
             // console.log(user);
-        }
-    }
+        },
+    },
 };
 </script>
 

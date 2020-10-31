@@ -61,25 +61,25 @@ import { AppService } from '../api/api';
 export default {
     name: 'Join',
     props: {
-        msg: String
+        msg: String,
     },
     data: () => ({
         name: null,
         username: null,
-        password: null
+        password: null,
     }),
     methods: {
         async join() {
             const response = await AppService.joinRoom({
                 name: this.name,
                 username: this.username,
-                password: this.password
+                password: this.password,
             });
             console.log(response);
             const user = await AppService.getUser();
             console.log(user);
-        }
-    }
+        },
+    },
 };
 </script>
 
